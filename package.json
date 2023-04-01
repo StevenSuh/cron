@@ -2,21 +2,29 @@
   "name": "cron",
   "version": "0.1.0",
   "private": true,
+  "main": "electron/index.js",
+  "homepage": "./",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "dev": "concurrently -k \"npm run next:dev\" \"npm run electron:dev\"",
+    "next:dev": "next dev",
+    "next:build": "next build",
+    "next:start": "next start",
+    "next:lint": "next lint",
+    "electron:dev": "wait-on tcp:3000 && electron ."
   },
   "dependencies": {
     "@types/node": "18.15.11",
     "@types/react": "18.0.31",
     "@types/react-dom": "18.0.11",
+    "concurrently": "^8.0.1",
+    "electron": "^23.2.1",
+    "electron-is-dev": "^2.0.0",
     "eslint": "8.37.0",
     "eslint-config-next": "13.2.4",
     "next": "13.2.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "typescript": "5.0.3"
+    "typescript": "5.0.3",
+    "wait-on": "^7.0.1"
   }
 }

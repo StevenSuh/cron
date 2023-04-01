@@ -1,3 +1,11 @@
+Resources:
+- [next.js docs](https://nextjs.org/docs/getting-started)
+- [electron with react](https://blog.codemagic.io/building-electron-desktop-apps-with-react/)
+
+
+-------------------------------------------------------------------------
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
